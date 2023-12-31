@@ -26,11 +26,11 @@ jobs:
       with:
         context: .
         push: true
-        tags: ${{ secrets.AZURE_REGISTRY_LOGIN_SERVER }}/myImage:latest
+        tags: ${{ secrets.AZURE_REGISTRY_LOGIN_SERVER }}/xlr8-backend:latest
 
     - name: 'Deploy to Azure'
       uses: azure/webapps-deploy@v2
       with:
         app-name: ${{ secrets.AZURE_WEBAPP_NAME }}
         slot-name: 'production'
-        images: ${{ secrets.AZURE_REGISTRY_LOGIN_SERVER }}/myImage:latest
+        images: ${{ secrets.AZURE_REGISTRY_LOGIN_SERVER }}/xlr8-backend:latest
