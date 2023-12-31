@@ -3,11 +3,11 @@ import express from "express";
 import cors from "cors";
 import helmet from "helmet";
 
-import validateEnv from "@utils/validateEnv";
+// import validateEnv from "@utils/validateEnv";
 
 dotenv.config();
 
-validateEnv();
+// validateEnv();
 
 const app = express();
 
